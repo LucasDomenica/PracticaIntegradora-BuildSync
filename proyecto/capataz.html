@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>capataz</title>
+</head>
+<body>
+    <button id="logout-btn" class="logout-btn" type="button">Cerrar Sesión</button>
+    <h1>Panel de Capataz</h1>
+
+
+    <!-- Panel para ver información del proyecto asignado -->
+    <section id="foreman-panel">
+      <h2>Información del Proyecto Asignado</h2>
+      <div id="project-info">
+        <!-- Aquí se mostrará la información del proyecto asignado -->
+      </div>
+      
+      <!-- Panel para informar progreso del proyecto -->
+      <h2>Informe de Progreso</h2>
+      <form id="progress-form">
+        <label for="progress-percentage">Progreso Completado (%):</label>
+        <input type="number" id="progress-percentage" min="0" max="100" required>
+        <button type="submit">Guardar Progreso</button>
+      </form>
+  
+      <!-- Subir fotos del progreso -->
+      <h2>Subir Fotos del Progreso</h2>
+      <form id="photo-form">
+        <input type="file" id="progress-photo" accept="image/*" required>
+        <button type="submit">Subir Foto</button>
+      </form>
+  
+      
+  
+    <!-- Panel para agregar Albañil a Proyecto -->
+    <h2>Agregar Albañil a Proyecto</h2>
+    <form id="add-worker-form">
+      <label for="assign-project">Asignar a Proyecto:</label>
+      <select id="assign-project">
+        <option value="">-- Selecciona un proyecto --</option>
+      </select>
+      
+      <label for="worker-name">Nombre del Albañil:</label>
+      <input type="text" id="worker-name" required>
+      <button type="submit">Añadir Albañil</button>
+    </form>
+    
+    <h3>Lista de Albañiles</h3>
+    <ul id="worker-list">
+      <!-- Los albañiles añadidos se mostrarán aquí -->
+    </ul>
+  </section>
+  <script src="/js/capataz.js"></script>
+  <script src="/js/logout.js"></script>
+ 
+</body>

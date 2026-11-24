@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/estilos.css">
+    <title>Arquitecto</title>
+</head>
+
+<body>
+    <button id="logout-btn" class="logout-btn" type="button">Cerrar Sesión</button>
+
+    <h1>Panel de Arquitecto</h1>
+
+    <!-- Panel para agregar proyectos y asignar Capataz -->
+    <section id="admin-panel">
+        <h2>Agregar Proyecto</h2>
+        <form id="add-project-form">
+            <label for="project-name">Nombre del Proyecto:</label>
+            <input type="text" id="project-name" required>
+
+            <label for="project-description">Descripción del Proyecto:</label>
+            <textarea id="project-description" required></textarea>
+
+            <label for="start-date">Fecha de Inicio:</label>
+            <input type="date" id="start-date" required>
+
+            <label for="end-date">Fecha de Fin:</label>
+            <input type="date" id="end-date" required>
+
+            <label for="assign-foreman">Asignar Capataz:</label>
+            <select id="assign-foreman">
+                <option value="">-- Selecciona un capataz --</option>
+            </select>
+
+            <button type="submit">Añadir Proyecto</button>
+        </form>
+
+        <h2>Agregar Capataz</h2>
+        <form id="add-foreman-form">
+            <label for="foreman-name">Nombre del Capataz (Usuario):</label>
+            <input type="text" id="foreman-name" required>
+
+            <label for="foreman-password">Contraseña:</label>
+            <input type="password" id="foreman-password" required>
+
+            <button type="submit">Añadir Capataz</button>
+        </form>
+
+        <h2>Agregar Albañil</h2>
+        <form id="add-worker-admin-form">
+            <label for="admin-worker-name">Nombre del Albañil (Usuario):</label>
+            <input type="text" id="admin-worker-name" required>
+
+            <label for="admin-worker-password">Contraseña:</label>
+            <input type="password" id="admin-worker-password" required>
+
+            <button type="submit">Añadir Albañil</button>
+        </form>
+
+        <h3>Lista de Capataces</h3>
+        <ul id="foreman-list">
+            <!-- Los capataces añadidos se mostrarán aquí -->
+        </ul>
+
+        <h3>Lista de Albañiles</h3>
+        <ul id="admin-worker-list">
+            <!-- Los albañiles añadidos se mostrarán aquí -->
+        </ul>
+
+        <h3>Lista de Proyectos</h3>
+        <ul id="project-list">
+            <!-- Los proyectos añadidos se mostrarán aquí -->
+        </ul>
+    </section>
+
+    <script src="/js/admin.js"></script>
+    <script src="/js/logout.js"></script>
+</body>
+
+</html>
